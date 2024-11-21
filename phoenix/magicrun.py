@@ -4,10 +4,9 @@ from phoenix.magic import Magic
 import time
 magic = Magic()
 client = phoenix.client.client
-@events.register(events.NewMessage)
+@events.register(events.NewMessage(pattern='\.magic'))
 async def magicrun(event):
-		if '.magic' in event.raw_text:
-			time.sleep(0.3)
-			for d in magic.magic:
-				time.sleep(0.3)
-				await event.edit(d)
+		time.sleep(0.2)
+		for d in magic.magic:
+			time.sleep(0.2)
+			await event.edit(d)

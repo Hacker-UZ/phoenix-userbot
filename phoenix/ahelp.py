@@ -4,11 +4,10 @@ import phoenix.client
 client = phoenix.client.client
 @events.register(events.NewMessage(outgoing=True, pattern=".ahelp"))
 async def ahelp(event):
-	client.parse_mode = "html"
 	await event.delete()
 	messagelocation = event.to_id
 	await event.client.send_message(messagelocation, ("""
-<b>ANIMATSIONS MENU</b>
+ANIMATSIONS MENU
 
 [01] Monster art - .monster
 [02] Pig art - .pig
@@ -43,7 +42,9 @@ async def ahelp(event):
 [31] Hearts anim - .vheart {text}
 [32] Love you anim - .luvart {text}
 [33] I love you art - .iloveu
-
-<b>Developer:</b> @programmer_www
-<b>Channel:</b> @phoenix_userbot
+[34] Happy Birthday art - .hbd
+[35] Good morning - .gm
+												   
+Developer: @programmer_www
+Channel: @phoenix_userbot
 """))

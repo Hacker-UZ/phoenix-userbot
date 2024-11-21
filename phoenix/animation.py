@@ -169,7 +169,6 @@ async def tmoon(event):
         return
     animation_interval = 0.1
     animation_ttl = range(0, 117)
-    await event.edit("Tmoon")
     animation_chars = [
         "🌗",
         "🌘",
@@ -213,8 +212,7 @@ async def tmoon(event):
 async def hearts(event):
     if event.fwd_from:
         return
-    animation_ttl = range(0, 120)
-    await event.edit("Hearts")
+    animation_ttl = range(0, 800)
     animation_chars = [
         "❤️",
         "🧡",
@@ -224,16 +222,10 @@ async def hearts(event):
         "🤎",
         "🖤",
         "🤍",
-        "💖",
-        "💘",
-        "💝",
-        "💔",
-        "💗",
-        "💓",
     ]
     for i in animation_ttl:
-        await asyncio.sleep(0.3)
-        await event.edit(animation_chars[i % 14])
+        await asyncio.sleep(0.1)
+        await event.edit(animation_chars[i % 8])
 
 
 @events.register(events.NewMessage(pattern=f".clown$", outgoing=True))

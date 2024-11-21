@@ -1,4 +1,4 @@
-import os, sys
+import os
 os.system("pkg install pip")
 os.system("pip install telethon")
 os.system("pip install aiocron")

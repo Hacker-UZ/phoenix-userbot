@@ -60,9 +60,9 @@ async def setclock(event):
 from telethon import events
 from time import sleep
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.finda'))
+@events.register(events.NewMessage(outgoing=True, pattern=r'\.findaccount'))
 async def runsda(event):
-    await event.edit("Qidirilmoqda...")
+    await event.edit("Searching...")
     sleep(1)
     await event.delete()
     messagelocation = event.to_id
@@ -74,15 +74,15 @@ async def runsda(event):
                 deletedid.append(users.id)
         countdeletedid = len(deletedid)
         if countdeletedid == 1:
-            await event.client.send_message(messagelocation, f"{countdeletedid} O'chirilgan hisoblar topildi \nGuruh nomi: {chatname}")
+            await event.client.send_message(messagelocation, f"{countdeletedid} Deleted accounts not found\nGuruh nomi: {chatname}")
         elif countdeletedid == 0:
-            await event.client.send_message(messagelocation, f"O'chirilgan hizoblar topilmadi\nGuruh nomi: {chatname}")
+            await event.client.send_message(messagelocation, f"Deleted accounts not found\nGuruh nomi: {chatname}")
         else:
-            await event.client.send_message(messagelocation, f"{countdeletedid} O'chirilgan hisoblar topildi \nGuruh nomi: {chatname}")
+            await event.client.send_message(messagelocation, f"{countdeletedid} Deleted accounts not found\nGuruh nomi: {chatname}")
     except:
         await event.client.send_message(messagelocation, "Something Went Wrong")
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.removeakk'))
+@events.register(events.NewMessage(outgoing=True, pattern=r'\.removeaccount'))
 async def runrda(event):
     await event.edit("waiting...")
     sleep(1)
@@ -97,13 +97,13 @@ async def runrda(event):
                 await event.client.kick_participant(messagelocation, users.id)
         countdeletedid = len(deletedid)
         if countdeletedid == 1:
-            await event.client.send_message(messagelocation, f"{countdeletedid} O'chirilgan hisoblar guruhdan o'chirib tashlandi\n guruh nomi:  {chatname}")
+            await event.client.send_message(messagelocation, f"{countdeletedid} Deleted accounts removed from this group\n Group name:  {chatname}")
         elif countdeletedid == 0:
-            await event.client.send_message(messagelocation, f"O'chirilgan hizoblar topilmadi\nGuruh nomi: {chatname}")
+            await event.client.send_message(messagelocation, f"Deleted accounts not found\nGuruh nomi: {chatname}")
         else:
-         await event.client.send_message(messagelocation, f"{countdeletedid} O'chirilgan hisoblar chiqarib tashlandi' {chatname}")
+         await event.client.send_message(messagelocation, f"{countdeletedid} Deleted accounts kicked {chatname}")
     except:
-        await event.client.send_message(messagelocation, "Some eror")
+        await event.client.send_message(messagelocation, "Some error")
  
 
 from os import remove

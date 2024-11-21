@@ -25,7 +25,7 @@ async def tr(event):
         after_tr_text = translated.text
         source_lan = await translator.detect(f'{translated.orig}')
         transl_lan = await translator.detect(f'{translated.text}')
-        output_str = "Message language: **{}**\nTranslated: **{}**\n\nMessage: {}".format(
+        output_str = "Message language: {}\nTranslated: {}\n\nMessage: {}".format(
             source_lan,
             transl_lan,
             after_tr_text

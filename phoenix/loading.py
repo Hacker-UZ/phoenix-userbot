@@ -15,7 +15,7 @@ async def loading(event: events.NewMessage.Event):
             percentage = round(percentage, 2)
 
             progress = int(percentage // 5)
-            await event.edit(f'`|{"█" * progress}{"-" * (20 - progress)}| {percentage}%`')
+            await event.edit(f'|{"█" * progress}{"-" * (20 - progress)}| {percentage}%')
             await asyncio.sleep(.5)
 
         time.sleep(5)

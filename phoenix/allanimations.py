@@ -493,14 +493,13 @@ async def alien(ult):
 
 
 @events.register(events.NewMessage(pattern=".hart( (.*)|$)"))
-async def hert(ult):
-    ult = await ult.edit("...")
-    animation_interval = 0.5
-    animation_ttl = range(0, 120)
-    animation_chars = ["🖤", "❤️", "🖤", "❤️", "‎"]
+async def hert(event):
+    animation_interval = 0.3
+    animation_ttl = range(0, 400)
+    animation_chars = ["🖤", "❤️", "🖤", "❤️",]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
-        await ult.edit(animation_chars[i % 4])
+        await event.edit(animation_chars[i % 4])
 
 
 @events.register(events.NewMessage(pattern=".raped( (.*)|$)"))

@@ -10,26 +10,26 @@ async def alive(event):
 		username = me.username
 		img = await client.download_profile_photo(username)
 		time.sleep(0.5)
-		await event.respond(f"""**Foydalanuvchi:** @{username}
-**Phoenix Userbot:** https://t.me/phoenix_userbot
+		await event.respond(f"""Foydalanuvchi: @{username}
+Phoenix Userbot: https://t.me/phoenix_userbot
 
-**Developer:** @programmer_www
+Developer: @programmer_www
 			
-v.1.2.0
+v.1.3.0
 
 📥 INSTALL 
 
-$ `pkg update && pkg upgrade`
+$ pkg update && pkg upgrade
 
-$ `apt update && apt upgrade`
+$ apt update && apt upgrade
 
-$ `pkg install git`
+$ pkg install git
 
-$ `pkg install python`
+$ pkg install python
 
-$ `git clone https://github.com/Hacker-UZ/phoenix-userbot`
+$ git clone https://github.com/Hacker-UZ/phoenix-userbot
 
-$ `python setup.py`
+$ python setup.py
 
-$ `python main.py`""", file=img)
+$ python main.py""", file=img)
 		await event.message.delete()

@@ -1,5 +1,6 @@
-import phoenix.client, phoenix.kick, phoenix.ketdim, phoenix.uzbrun, phoenix.whyrun, phoenix.iloveyou, phoenix.goodnight, phoenix.ahelp, phoenix.konspekt, phoenix.lovelyrun, phoenix.bombs, phoenix.help, phoenix.loading, phoenix.emoji, phoenix.dump, phoenix.sexy, phoenix.type, phoenix.magicrun, phoenix.animation, phoenix.animation2, phoenix.mute, phoenix.fuck, phoenix.rev, phoenix.tr, phoenix.userinfo, phoenix.base64, phoenix.react, phoenix.snow, phoenix.smsbomb, phoenix.rename, phoenix.iptrace, phoenix.spam, phoenix.alive, phoenix.tagall, phoenix.afk, phoenix.timer, phoenix.ping
-import phoenix.allanimations as allanim 
+import phoenix.client, phoenix.kick, phoenix.goodmorning, phoenix.ketdim, phoenix.uzbrun, phoenix.whyrun, phoenix.happybirthday, phoenix.iloveyou, phoenix.goodnight, phoenix.ahelp, phoenix.lovelyrun, phoenix.bombs, phoenix.help, phoenix.loading, phoenix.emoji, phoenix.dump, phoenix.sexy, phoenix.type, phoenix.magicrun, phoenix.animation, phoenix.animation2, phoenix.mute, phoenix.fuck, phoenix.rev, phoenix.tr, phoenix.userinfo, phoenix.base64, phoenix.react, phoenix.snow, phoenix.TextToSpeech, phoenix.rename, phoenix.iptrace, phoenix.spam, phoenix.alive, phoenix.tagall, phoenix.afk, phoenix.timer, phoenix.ping
+import phoenix.allanimations as allanim
+import phoenix.fonts as fonts
 import os
 #Developer: @programmer_www
 
@@ -50,7 +51,7 @@ client.add_event_handler(phoenix.snow.snow)
 client.add_event_handler(phoenix.rename.rename)	
 client.add_event_handler(phoenix.iptrace.iptrace)
 client.add_event_handler(phoenix.spam.delayspam)
-client.add_event_handler(phoenix.smsbomb.runj)	
+client.add_event_handler(phoenix.TextToSpeech.runj)	
 client.add_event_handler(phoenix.alive.alive)
 client.add_event_handler(phoenix.tagall.tagall)
 client.add_event_handler(phoenix.afk.runafkon)
@@ -69,7 +70,6 @@ client.add_event_handler(phoenix.timer.runrgm)
 client.add_event_handler(phoenix.timer.setbioclock)
 client.add_event_handler(phoenix.ping.ping)
 client.add_event_handler(phoenix.lovelyrun.lovelyrun)
-client.add_event_handler(phoenix.konspekt.tconv)
 client.add_event_handler(allanim.animmonster)
 client.add_event_handler(allanim.animpig)
 client.add_event_handler(allanim.animkiller)
@@ -108,6 +108,15 @@ client.add_event_handler(phoenix.kick.runkick)
 client.add_event_handler(phoenix.ketdim.ketdihandlers)
 client.add_event_handler(phoenix.uzbrun.uzbanim)
 client.add_event_handler(phoenix.whyrun.why)
+client.add_event_handler(fonts.weebify)
+client.add_event_handler(fonts.boxtxt)
+client.add_event_handler(fonts.bubbletxt)
+client.add_event_handler(fonts.tantxt)
+client.add_event_handler(fonts.linetxt)
+client.add_event_handler(fonts.cursive)
+client.add_event_handler(phoenix.goodmorning.goodmorning)
+client.add_event_handler(phoenix.happybirthday.hbd)
+
 	
 client.start()
 
@@ -119,8 +128,10 @@ print("""\033[031m
 /_/  /_//_/\____/___/_/|_/___/_/|_|   \____/___/___/_/|_/____/\____/ /_/    
       
 Developer: @programmer_www
-Telegram channel: @phoenix_userbot
+Telegram channel: @phoenix_userbots
+
+You might send the .help command to any chat in Telegram
 """)
-print("\033[032mStarted")
+print("\033[032mPhoenix Userbot set succesfully")
 
 client.run_until_disconnected()

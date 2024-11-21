@@ -6,10 +6,9 @@ async def help(event):
 	await event.delete()
 	messagelocation = event.to_id
 	await event.client.send_message(messagelocation, ("""
-**USERBOT HELP MENU**
-		  
-Umumiy modullar: 63
-<== **Animatsions** ==>
+USERBOT COMMANDS
+
+<== Animatsions ==>
 [01] Help - Help menu — .help
 [02] Bombs - Animation emojise — .bombs
 [03] Loading  - Animation loading — .loading
@@ -19,7 +18,7 @@ Umumiy modullar: 63
 [07] Typer - Animation write text - .type <here text>
 [08] Lul - Animatsion lul - .lul
 [09] Snake - Snake animation - .snake 
-[10] Nothappy - Abimation Nothappy - .nothappy
+[10] Nothappy - Animation Nothappy - .nothappy
 [11] Clock - Animation clock - .clock
 [12] Muah - Animation - .muah
 [13] Heart - Animation - .heart
@@ -51,10 +50,10 @@ Umumiy modullar: 63
 [39] Ketdim animatsiyasi - .ketdim
 [40] Why animation Nega? - .why
 [41] UZBEK SILA Animation - .uzb
-<== **Functions** ==>
+<== Functions ==>
 [42] Mute - Admin function - .mute (m, h, d)
-[43] Text to voice - .tts <language code> <reply>
-[44] Kick chopish - .kick
+[43] Text to speech - .speech <language code> <reply>
+[44] Kick ✈🚀 - .kick
 [45] Clock to bio - datetime - .setbioclock <number>
 [46] Clock to nick - firstname clock - .setclock <number> <nickname>
 [47] Timer - timer animation - .timer <number>
@@ -62,9 +61,9 @@ Umumiy modullar: 63
 [49] Numbers - Numbers - .numbers <number>
 [50] Tag all - tag group members - .tagall
 [51] Base64 - shifrlash - .b64 en <reply text> .b64 de <reply encoded message>
-[52] Find - find delete accounts - .finda
+[52] Find - find deleted accounts - .findaccount
 [53] Picture save - save the picture - .psave
-[54] Remove - Admin function remove delete accounts - .removeakk
+[54] Remove - Admin function remove deleted accounts - .removeaccount
 [55] Ip trace - ip osint - .iptrace <ip addres>
 [56] Rename - .rename <Firstname> / <Lastname>
 [57] Userinfo - User information - .userinfo <reply>
@@ -72,9 +71,16 @@ Umumiy modullar: 63
 [59] Message save - save  message - .msave
 [60] Rgm - reload get message - .rgm
 [61] Reverse - reverse text - .rev <reply>
-[62] Konspekt - konspekt yozish - .konspekt <reply message>
-[63] Tr - Translator - .tr <language code > <reply message>
+[62] Tr - Translator - .tr <language code > <reply message>
+<== Fonts ==>
+[63] Weebyfont - 卂乃匚 - .wb text
+[64] TanText - ᎯᏰᏣ - .tnxt
+[65] Linetext - 𝔸𝔹ℂ - .lnt
+[66] Boxtext - 🄰🄱🄲 - .bxt
+[67] Bubbletext - ⒶⒷⒸ - .bbt
+[68] Cursive - 𝓪𝓫𝓬 - .crs
 [++] Animation help - .ahelp
 				  		  
 Developer: @programmer_www
+Channel: @phoenix_userbot
 """))
